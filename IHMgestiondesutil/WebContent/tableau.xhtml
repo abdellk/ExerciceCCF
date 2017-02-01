@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<f:view contentType="text/html" />
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>LISTE DES UTILISATEURS</title>
+</head>
+
+<body>
+	<h:form>
+
+		<h:dataTable value="#{ihm.listedto}" var="utilisateur" border="2">
+
+			<h:column>
+				<f:facet name="header">
+					<f:verbatim>NOM</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{utilisateur.nom}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<f:verbatim>PRENOM</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{utilisateur.prenom}" />
+			</h:column>
+			
+			<h:column>
+
+				<f:facet name="header">
+					<f:verbatim>EMAIL</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{utilisateur.email}" />
+			</h:column>
+
+			<h:column>
+
+				<f:facet name="header">
+					<f:verbatim>PASSWORD</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{utilisateur.password}" />
+			</h:column>
+
+			<h:column>
+
+				<f:facet name="header">
+					<f:verbatim>ROLE</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{utilisateur.role}" />
+			</h:column>
+
+		</h:dataTable>
+
+	</h:form>
+</body>
+</html>
